@@ -20,6 +20,7 @@ void ProcessRawData(int DataSize)
 
     for (size_t ii = 0; ii < InputIndex; ++ii) 
     {
+        //if (BuffIn[ii] & 0x80)         // if MSB set and any other
         if (BuffIn[ii] == MSBSETVALUE)  // if just MSB set, new frame
         { 
             if (IsFrameStarted) 
